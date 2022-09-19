@@ -1,0 +1,35 @@
+{
+  "name": "astro-github-time-elements",
+  "version": "0.0.1",
+  "author": "Bryce Russell",
+  "license": "MIT",
+  "description": "An Astro wrapper for the '@github/time-elements' library for easy to use Date/Time components",
+  "keywords": [
+    "astro",
+    "astro-component",
+    "astro-bryceguy",
+    "date",
+    "time"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BryceRussell/astro-github-time-elements.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BryceRussell/astro-github-time-elements/issues"
+  },
+  "homepage": "https://github.com/BryceRussell/astro-github-time-elements#readme",
+  "main": "./index.ts",
+  "exports": "./index.ts",
+  "files": [
+    "index.ts",
+    "Import.astro",
+    "LocalTime.astro",
+    "RelativeTime.astro",
+    "TimeUntil.astro",
+    "TimeAgo.astro"
+  ],
+  "dependencies": {
+    "@github/time-elements": "^3.1.4"
+  }
+}

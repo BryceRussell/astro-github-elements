@@ -2,16 +2,19 @@
   "name": "@example/minimal",
   "type": "module",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
+    "dev": "astro dev --root demo dev",
+    "start": "astro dev --root demo dev",
+    "build": "astro build --root demo dev",
+    "preview": "astro preview --root demo dev",
     "astro": "astro"
   },
   "dependencies": {
     "@github/time-elements": "^3.1.4",
     "astro": "^1.2.6"
-  }
+  },
+  "workspaces": [
+    "./package",
+    "./demo"
+  ]
 }

@@ -1,0 +1,23 @@
+---
+import Import from './Import.astro';
+
+export interface Props {
+    datetime?: Date | string;
+}
+
+const {
+  class:className,
+  datetime,
+  ...attrs
+} = Astro.props
+---
+
+<Import />
+
+<relative-time
+  class:list={className}
+  datetime={(datetime instanceof Date)?datetime.toISOString():datetime}
+  {...attrs}
+>
+  <slot />
+</relative-time>

@@ -1,0 +1,30 @@
+---
+import Import from './Import.astro';
+
+export interface Props {
+    datetime?: Date | string;
+    micro?: boolean;
+}
+
+const {
+  class:className,
+  datetime,
+  micro,
+  ...attrs
+} = Astro.props
+
+const calc_attrs = {
+    format: micro?"micro":null,
+    ...attrs
+}
+---
+
+<Import />
+
+<time-until
+  class:list={className}
+  datetime={(datetime instanceof Date)?datetime.toISOString():datetime}
+  {...calc_attrs}
+>
+  <slot />
+</time-until>

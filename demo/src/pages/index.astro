@@ -1,0 +1,26 @@
+---
+import { LocalTime, RelativeTime, TimeUntil, TimeAgo } from 'astro-github-time-elements';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+		<ul style="display:flex;flex-direction:column;gap:0.5rem;">
+			<LocalTime date/>
+			<LocalTime time/>
+			<LocalTime date time/>
+			<RelativeTime datetime="2022-09-17T00:00:00.000Z" />
+			<TimeUntil datetime="2023-01-01T00:00:00.000Z"/>
+			<TimeUntil datetime="2023-01-01T00:00:00.000Z" micro/>
+			<TimeAgo datetime="2020-01-01T00:00:00.000Z"/>
+			<TimeAgo datetime="2020-01-01T00:00:00.000Z" micro/>
+		</ul>
+	</body>
+</html>
