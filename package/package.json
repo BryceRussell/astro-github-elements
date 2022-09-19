@@ -19,10 +19,12 @@
     "url": "https://github.com/BryceRussell/astro-github-time-elements/issues"
   },
   "homepage": "https://github.com/BryceRussell/astro-github-time-elements#readme",
-  "main": "./index.ts",
-  "exports": "./index.ts",
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": "./index.js",
   "files": [
-    "index.ts",
+    "index.js",
     "Import.astro",
     "LocalTime.astro",
     "RelativeTime.astro",
