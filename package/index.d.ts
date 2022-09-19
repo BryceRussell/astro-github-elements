@@ -1,1 +1,0 @@
-declare module "astro-github-time-elements";

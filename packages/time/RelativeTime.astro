@@ -6,7 +6,6 @@ export interface Props {
 }
 
 const {
-  class:className,
   datetime,
   ...attrs
 } = Astro.props
@@ -15,7 +14,6 @@ const {
 <Import />
 
 <relative-time
-  class:list={className}
   datetime={(datetime instanceof Date)?datetime.toISOString():datetime}
   {...attrs}
 >

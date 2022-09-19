@@ -7,7 +7,6 @@ export interface Props {
 }
 
 const {
-  class:className,
   datetime,
   micro,
   ...attrs
@@ -21,10 +20,9 @@ const calc_attrs = {
 
 <Import />
 
-<time-ago
-  class:list={className}
+<time-until
   datetime={(datetime instanceof Date)?datetime.toISOString():datetime}
   {...calc_attrs}
 >
   <slot />
-</time-ago>
+</time-until>

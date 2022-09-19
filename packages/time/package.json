@@ -1,6 +1,6 @@
 {
-  "name": "astro-github-time-elements",
-  "version": "0.0.2",
+  "name": "@astro-github-elements/time",
+  "version": "0.0.1",
   "author": "Bryce Russell",
   "license": "MIT",
   "description": "An Astro wrapper for the '@github/time-elements' library for easy to use Date/Time components",
@@ -13,12 +13,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BryceRussell/astro-github-time-elements.git"
+    "url": "git+https://github.com/BryceRussell/astro-github-elements.git"
   },
   "bugs": {
-    "url": "https://github.com/BryceRussell/astro-github-time-elements/issues"
+    "url": "https://github.com/BryceRussell/astro-github-elements/issues"
   },
-  "homepage": "https://github.com/BryceRussell/astro-github-time-elements/tree/main/package",
+  "homepage": "https://github.com/BryceRussell/astro-github-elements/tree/main/packages/time",
   "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",

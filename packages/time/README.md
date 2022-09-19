@@ -1,24 +1,23 @@
-# Astro Github Time Element
+# `@astro-github-elements/time`
 
-This is a astro wrapper for the [@github/time-elements](https://github.com/github/time-elements) library, it does a few things:
+This is a astro wrapper for the [@github/time-elements](https://github.com/github/time-elements#readme) library, it does a few things:
 
 - Makes importing components is easier
-- Ability to use `Date` objects with the `datetime` prop
 - Adds typing to props
+- Ability to use `Date` objects with the `datetime` prop
 - `<LocalTime>`: creates it own date object by default
 - Small API for adding attributes
-- Classes use the `class:list` directive
 
 ## How to Use
 
 ```
-npm i astro-github-time-elements
+npm i @astro-github-elements/time
 ```
 
 ```ts
 
 ---
-import LocalTime from 'astro-github-time-elements';
+import { LocalTime } from '@astro-github-elements/time';
 ---
 
 <LocalTime date time/>
@@ -42,19 +41,15 @@ import LocalTime from 'astro-github-time-elements';
 
 ## Extended API
 
-[Check out the @github/time-elements API](https://github.com/github/time-elements) to see how these components work, below are a few props added by this wrapper to make using the components a little bit easier
+[Check out the @github/time-elements API](https://github.com/github/time-elements#readme) to see how these components work
+
+Below are a few props added by this wrapper component to make the components a little bit easier to use
 
 ### `datetime`
 
 **Type**: `Date | string`
 
 All `datetime` props now have the ability to use a `Date` object instead of only `string`
-
-### `class`
-
-**Type**: `{} | [] | string`
-
-All `class` props use the `class:list` directive for the ability to do class logic
 
 ### `<LocalTime>`
 
@@ -128,4 +123,4 @@ Adds the attribute `format="micro"` to your element, shortens the descriptions t
 <TimeAgo micro datetime="2020-01-01T00:00:00.000Z"/> // 3y
 ```
 
-[Check out the @github/time-elements API](https://github.com/github/time-elements) for more help
+[Check out the @github/time-elements API](https://github.com/github/time-elements#readme) for more help

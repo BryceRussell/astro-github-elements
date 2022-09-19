@@ -16,7 +16,6 @@ export interface Props {
 }
 
 const {
-  class:className,
   datetime=new Date,
   date,
   time,
@@ -41,7 +40,6 @@ const calc_attrs = {
 <Import />
 
 <local-time
-  class:list={className}
   datetime={(datetime instanceof Date)?datetime.toISOString():datetime}
   {...calc_attrs}
 >

@@ -14,7 +14,7 @@
     "astro": "^1.2.6"
   },
   "workspaces": [
-    "./package",
+    "./packages/*",
     "./demo"
   ]
 }
