@@ -6,6 +6,7 @@ This is a astro wrapper for the [@github/time-elements](https://github.com/githu
 - Ability to use `Date` objects with the `datetime` prop
 - Adds typing to props
 - `<LocalTime>`: creates it own date object by default
-- Small API for adding attributes 
+- Small API for adding attributes
+- Classes use the `class:list` directive
 
 [Check out the docs here --->](https://github.com/BryceRussell/astro-github-time-elements/tree/main/package)
