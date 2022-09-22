@@ -14,7 +14,7 @@ This is a astro wrapper for the [@github/time-elements](https://github.com/githu
 npm i @astro-github-elements/time
 ```
 
-```ts
+```tsx
 
 ---
 import { LocalTime } from '@astro-github-elements/time';

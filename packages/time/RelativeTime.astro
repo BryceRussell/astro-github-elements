@@ -1,8 +1,8 @@
 ---
 import Import from './Import.astro';
 
-export interface Props {
-    datetime?: Date | string;
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+    datetime: Date | string;
 }
 
 const {
