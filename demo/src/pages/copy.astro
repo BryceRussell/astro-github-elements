@@ -1,5 +1,5 @@
 ---
-
+import { ClipboardCopy } from '@astro-github-elements/clipboard-copy';
 ---
 
 <html lang="en">
@@ -12,9 +12,8 @@
 	</head>
 	<body>
 		<h1>Astro</h1>
-		<nav style="display:flex;flex-direction:column;gap:0.5rem;text-decoration:underline;">
-			<a href="/time">Time</a>
-			<a href="/copy">ClipboardCopy</a>
-		</nav>
+		<ul style="display:flex;flex-direction:column;gap:0.5rem;">
+			<ClipboardCopy value="copy this text">Button</ClipboardCopy>
+		</ul>
 	</body>
-</html>
+</html> 
