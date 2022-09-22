@@ -8,7 +8,7 @@ This is a collection of Astro wrapper components for the [github-elements projec
 - Typing for props
 - More types are supported for some props
 - Default values for some props
-- Small/'Micro' APIs for adding attributes more easiy for some components
+- Small/'Micro' APIs for some components for attribute presets or to make adding some attributes easier
 
 ## `@astro-github-elements/time`
 
