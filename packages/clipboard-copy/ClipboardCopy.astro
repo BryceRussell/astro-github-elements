@@ -1,0 +1,16 @@
+---
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  value?: string;
+  for?: string;
+}
+
+const { ...attrs } = Astro.props as Props
+---
+
+<script>
+  import '@github/clipboard-copy-element';
+</script>
+
+<clipboard-copy {...attrs}>
+  <slot />
+</clipboard-copy>

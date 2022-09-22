@@ -9,6 +9,9 @@
     "preview": "astro preview --root demo dev",
     "astro": "astro"
   },
+  "devDependencies": {
+    "@github/clipboard-copy-element": "^1.1.2"
+  },
   "dependencies": {
     "@github/time-elements": "^3.1.4",
     "astro": "^1.2.6"

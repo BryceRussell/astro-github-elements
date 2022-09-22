@@ -1,0 +1,34 @@
+{
+  "name": "@astro-github-elements/clipboard-copy",
+  "version": "0.0.1",
+  "author": "Bryce Russell",
+  "license": "MIT",
+  "description": "An Astro wrapper for the '@github/clipboard-copy' web component, an easy to use copy to clipboard button",
+  "keywords": [
+    "astro",
+    "astro-component",
+    "astro-bryceguy",
+    "github-elements",
+    "web component",
+    "clipboard",
+    "copy"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BryceRussell/astro-github-elements.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BryceRussell/astro-github-elements/issues"
+  },
+  "homepage": "https://github.com/BryceRussell/astro-github-elements/tree/main/packages/clipboard-copy#readme",
+  "type": "module",
+  "main": "./index.js",
+  "exports": "./index.js",
+  "files": [
+    "index.js",
+    "ClipboardCopy.astro"
+  ],
+  "dependencies": {
+    "@github/time-elements": "^3.1.4"
+  }
+}
