@@ -1,8 +1,8 @@
-# `@astro-github-elements/time`
+# `@astro-github-elements/clipboard-copy`
 
 This is a astro wrapper for the [@github/clipboard-copy-element](https://github.com/github/clipboard-copy-element#readme) component, it does a few things:
 
-- Makes importing component is easier
+- Makes importing component easier
 - Adds typing to props
 
 ## How to Use
