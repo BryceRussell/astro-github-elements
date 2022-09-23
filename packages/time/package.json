@@ -26,7 +26,6 @@
   "exports": "./index.js",
   "files": [
     "index.js",
-    "Import.astro",
     "LocalTime.astro",
     "RelativeTime.astro",
     "TimeUntil.astro",

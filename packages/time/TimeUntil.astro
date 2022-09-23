@@ -1,6 +1,4 @@
 ---
-import Import from './Import.astro';
-
 export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
     datetime: Date | string;
     micro?: boolean;
@@ -18,7 +16,10 @@ const calc_attrs = {
 }
 ---
 
-<Import />
+<script>
+  import { TimeUntilElement } from '@github/time-elements'
+  window.customElements.define('time-until', TimeUntilElement);
+</script>
 
 <time-until
   datetime={(datetime instanceof Date)?datetime.toISOString():datetime}

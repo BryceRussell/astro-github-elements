@@ -1,6 +1,4 @@
 ---
-import Import from './Import.astro';
-
 export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
   datetime?: Date | string;
   year?: "2-digit" | "numeric";
@@ -37,7 +35,10 @@ const calc_attrs = {
 }
 ---
 
-<Import />
+<script>
+  import { LocalTimeElement } from '@github/time-elements'
+  window.customElements.define('local-time', LocalTimeElement);
+</script>
 
 <local-time
   datetime={(datetime instanceof Date)?datetime.toISOString():datetime}

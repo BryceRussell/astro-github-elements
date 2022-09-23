@@ -1,6 +1,4 @@
 ---
-import Import from './Import.astro';
-
 export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
     datetime: Date | string;
     micro?: boolean;
@@ -18,7 +16,10 @@ const calc_attrs = {
 }
 ---
 
-<Import />
+<script>
+  import { TimeAgoElement } from '@github/time-elements'
+  window.customElements.define('time-ago', TimeAgoElement);
+</script>
 
 <time-ago
   datetime={(datetime instanceof Date)?datetime.toISOString():datetime}

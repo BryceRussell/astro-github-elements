@@ -1,6 +1,4 @@
 ---
-import Import from './Import.astro';
-
 export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
     datetime: Date | string;
 }
@@ -11,7 +9,10 @@ const {
 } = Astro.props
 ---
 
-<Import />
+<script>
+  import { RelativeTimeElement } from '@github/time-elements'
+  window.customElements.define('relative-time', RelativeTimeElement);
+</script>
 
 <relative-time
   datetime={(datetime instanceof Date)?datetime.toISOString():datetime}
