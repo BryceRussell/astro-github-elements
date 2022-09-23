@@ -1,6 +1,6 @@
 {
   "name": "@astro-github-elements/time",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Bryce Russell",
   "license": "MIT",
   "description": "An Astro wrapper for the '@github/time-elements' library for easy to use Date/Time components",

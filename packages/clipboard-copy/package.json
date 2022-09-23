@@ -1,6 +1,6 @@
 {
   "name": "@astro-github-elements/clipboard-copy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Bryce Russell",
   "license": "MIT",
   "description": "An Astro wrapper for the '@github/clipboard-copy' web component, an easy to use copy to clipboard button",
