@@ -12,7 +12,7 @@ This is a collection of Astro wrapper components for the [github-elements projec
 
 ## `@astro-github-elements/time`
 
-[@github/time-elements](https://github.com/github/time-elements)
+[@github/time-elements](/packages/time#readme)
 
 **Features**:
 
