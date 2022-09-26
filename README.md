@@ -14,10 +14,18 @@ This is a collection of Astro wrapper components for the [github-elements projec
 
 ### `@astro-github-elements/time`
 
-**Features**:
+A date/time component for displaying different types of time (past, present, future)
+
+**Extra Features**:
 
 - Ability to use `Date` objects with the `datetime` prop
 - `<LocalTime>`: creates it own date object by default
 - Small API for adding attributes
 
 [Check out the docs here --->](/packages/time#readme)
+
+### `@astro-github-elements/clipboard-copy`
+
+A component for copying values/text to your system's clipboard
+
+[Check out the docs here --->](/packages/clipboard-copy#readme)
