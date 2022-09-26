@@ -12,7 +12,7 @@ This is a collection of Astro wrapper components for the [github-elements projec
 
 ## `@astro-github-elements/time`
 
-[@github/time-elements](/packages/time#readme)
+[@github/time-elements]([/packages/time#readme](https://github.com/github/time-elements))
 
 **Features**:
 
@@ -20,4 +20,4 @@ This is a collection of Astro wrapper components for the [github-elements projec
 - `<LocalTime>`: creates it own date object by default
 - Small API for adding attributes
 
-[Check out the docs here --->](https://github.com/BryceRussell/astro-github-time-elements/tree/main/package)
+[Check out the docs here --->](/packages/time#readme)
