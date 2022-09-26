@@ -10,9 +10,9 @@ This is a collection of Astro wrapper components for the [github-elements projec
 - Default values for some props
 - Small/'Micro' APIs for some components for attribute presets or to make adding some attributes easier
 
-## `@astro-github-elements/time`
+## Packages
 
-[@github/time-elements]([/packages/time#readme](https://github.com/github/time-elements))
+### `@astro-github-elements/time`
 
 **Features**:
 
