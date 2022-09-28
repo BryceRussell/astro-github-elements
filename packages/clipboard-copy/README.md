@@ -14,7 +14,7 @@ npm i @astro-github-elements/clipboard-copy
 ```tsx
 
 ---
-import { LocalTime } from '@astro-github-elements/time';
+import { ClipboardCopyClipboardCopy } from '@astro-github-elements/clipboard-copy';
 ---
 
 <ClipboardCopy value="copy me">Click me</ClipboardCopy>
