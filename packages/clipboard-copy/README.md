@@ -14,7 +14,7 @@ npm i @astro-github-elements/clipboard-copy
 ```tsx
 
 ---
-import { ClipboardCopyClipboardCopy } from '@astro-github-elements/clipboard-copy';
+import { ClipboardCopy } from '@astro-github-elements/clipboard-copy';
 ---
 
 <ClipboardCopy value="copy me">Click me</ClipboardCopy>
@@ -25,11 +25,6 @@ import { ClipboardCopyClipboardCopy } from '@astro-github-elements/clipboard-cop
 <clipboard-copy value="copy me">Click me</clipboard-copy>
 ```
 
-## API
+## Documentation
 
 You can find the API for this component here: [@github/clipboard-copy-element](https://github.com/github/clipboard-copy-element#readme)
-
-## Todo
-
-- Add styling presets?
-- Show how to use with rehype?
