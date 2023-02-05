@@ -1,9 +1,9 @@
 {
   "name": "@astro-github-elements/time",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "author": "Bryce Russell",
   "license": "MIT",
-  "description": "An Astro wrapper for the '@github/time-elements' library for easy to use Date/Time components",
+  "description": "An Astro wrapper for the '@github/relative-time-element' package",
   "keywords": [
     "astro",
     "astro-component",
@@ -26,12 +26,9 @@
   "exports": "./index.js",
   "files": [
     "index.js",
-    "LocalTime.astro",
-    "RelativeTime.astro",
-    "TimeUntil.astro",
-    "TimeAgo.astro"
+    "RelativeTime.astro"
   ],
   "dependencies": {
-    "@github/time-elements": "^3.1.4"
+    "@github/relative-time-element": "^4.2.0"
   }
 }

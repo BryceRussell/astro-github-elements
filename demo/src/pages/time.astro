@@ -1,5 +1,5 @@
 ---
-import { LocalTime, RelativeTime, TimeUntil, TimeAgo } from '@astro-github-elements/time';
+import { Time } from '@astro-github-elements/time';
 ---
 
 <html lang="en">
@@ -13,14 +13,22 @@ import { LocalTime, RelativeTime, TimeUntil, TimeAgo } from '@astro-github-eleme
 	<body>
 		<h1>Astro</h1>
 		<ul style="display:flex;flex-direction:column;gap:0.5rem;">
-			<LocalTime date/>
-			<LocalTime time/>
-			<LocalTime date time/>
-			<RelativeTime datetime="2022-09-17T00:00:00.000Z"/>
-			<TimeUntil datetime="2023-01-01T00:00:00.000Z"/>
-			<TimeUntil datetime="2023-01-01T00:00:00.000Z" micro/>
-			<TimeAgo datetime="2020-01-01T00:00:00.000Z"/>
-			<TimeAgo datetime="2020-01-01T00:00:00.000Z" micro/>
+			<Time format="datetime" now/>
+			<Time format="datetime" datetime="2022-09-19T00:49:24.526Z"/>
+			<br>
+			<Time format="relative" now/>
+			<Time format="relative" datetime="2022-09-19T00:49:24.526Z"/>
+			<br>
+			<Time format="duration" now/>
+			<Time format="duration" datetime="2022-09-19T00:49:24.526Z"/>
+			<br>
+			<Time format="duration" datetime="2014-04-01T16:30:00-08:00" formatStyle="narrow"/>
+			<Time format="relative" datetime="2014-04-01T16:30:00-08:00"/>
+			<Time format="relative" datetime="2014-04-01T16:30:00-08:00"/>
+			<Time format="relative" datetime="2014-04-01T16:30:00-08:00"/>
+			<Time format="relative" datetime="2014-04-01T16:30:00-08:00"/>
+			<Time format="relative" datetime="2014-04-01T16:30:00-08:00"/>
+			<Time format="relative" datetime="2014-04-01T16:30:00-08:00"/>
 		</ul>
 	</body>
 </html>

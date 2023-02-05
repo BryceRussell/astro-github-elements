@@ -1,0 +1,47 @@
+---
+type Common = {
+  format: 'datetime'|'relative'|'duration';
+  tense?: 'auto'|'past'|'future';
+  precision?: 'year'|'month'|'day'|'hour'|'minute'|'second';
+  threshold?: string;
+  prefix?: string;
+  formatStyle?: 'long'|'short'|'narrow';
+  second?: 'numeric'|'2-digit';
+  minute?: 'numeric'|'2-digit';
+  hour?: 'numeric'|'2-digit';
+  weekday?: 'short'|'long'|'narrow';
+  day?: 'numeric'|'2-digit';
+  month?: 'numeric'|'2-digit'|'short'|'long'|'narrow';
+  year?: 'numeric'|'2-digit';
+  timeZoneName?: 'long'|'short'|'shortOffset'|'longOffset' |'shortGeneric'|'longGeneric';
+}
+
+type Truncate = 
+  | { datetime: Date|string; }
+  | { now?: boolean; }
+
+export type Props = Common & Truncate
+
+const {
+  now,
+  datetime=now?(new Date):undefined,
+  formatStyle,
+  timeZoneName,
+  ...attrs
+} = Astro.props
+---
+
+<script>
+  import '@github/relative-time-element'
+</script>
+
+<relative-time
+  datetime={(datetime instanceof Date)?datetime.toISOString():datetime}
+  {...{
+    ...attrs,
+    'format-style':formatStyle,
+    'time-zone-name':timeZoneName,
+  }}
+>
+  <slot />
+</relative-time>

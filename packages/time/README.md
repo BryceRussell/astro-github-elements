@@ -1,12 +1,15 @@
 # `@astro-github-elements/time`
 
-This is a astro wrapper for the [@github/time-elements](https://github.com/github/time-elements#readme) library, it does a few things:
+This is a astro wrapper for the [@github/relative-time-element](https://github.com/github/relative-time-element#readme) library, it does a few things:
 
-- Makes importing components is easier
+- Makes importing and using web component is easier
 - Adds typing to props
 - Ability to use `Date` objects with the `datetime` prop
-- `<LocalTime>`: creates it own date object by default
-- Small API for adding attributes
+- Pass current time using `now` prop
+
+# Why?
+
+This component lets the client decide how to render the date for more accessibility
 
 ## How to Use
 
@@ -14,113 +17,54 @@ This is a astro wrapper for the [@github/time-elements](https://github.com/githu
 npm i @astro-github-elements/time
 ```
 
-```tsx
+```jsx
 
 ---
-import { LocalTime } from '@astro-github-elements/time';
+import { Time } from '@astro-github-elements/time';
 ---
 
-<LocalTime date time/>
+<Time format="datetime" now />
+<Time format="datetime" datetime="2022-09-19T00:49:24.526Z" />
+
+<Time format="relative" now />
+<Time format="relative" datetime="2022-09-19T00:49:24.526Z" />
 ```
 
 **Output**:
+```html
+<relative-time datetime="2023-02-05T17:19:08.898Z" format="datetime" title="Feb 5, 2023, 11:19 AM CST">
+  Sun, Feb 5
+</relative-time>
+
+<relative-time datetime="2022-09-19T00:49:24.526Z" format="datetime" title="Sep 18, 2022, 7:49 PM CDT">
+  Sun, Sep 18, 2022
+</relative-time>
+
+<relative-time datetime="2023-02-05T17:20:43.371Z" format="relative" title="Feb 5, 2023, 11:20 AM CST">
+  now
+</relative-time>
+
+<relative-time datetime="2022-09-19T00:49:24.526Z" format="relative" title="Sep 18, 2022, 7:49 PM CDT">
+  on Sep 18, 2022
+</relative-time>
 ```
-<local-time 
-    datetime="2022-09-19T00:49:24.526Z"
-    year="numeric"
-    month="short"
-    day="numeric"
-    hour="2-digit"
-    minute="2-digit"
-    second="2-digit"
-    title="Sep 18, 2022, 7:49 PM CDT"
->
-    Sep 18, 2022 07:49:24 PM
-</local-time>
-```
 
-## Extended API
+## Changes to API
 
-[Check out the @github/time-elements API](https://github.com/github/time-elements#readme) to see how these components work
+The full API for this component can be viewed here: [@github/relative-time-element](https://github.com/github/relative-time-element#readme)
 
-Below are a few props added by this wrapper component to make the components a little bit easier to use
+Below are a few tiny changes
+
+### `format`
+
+Format is required instead of defaulting to `relative`, this is so that there is only one component named `<Time>`
 
 ### `datetime`
 
-**Type**: `Date | string`
+The datetime prop can be either a Date or ISO string
 
-All `datetime` props now have the ability to use a `Date` object instead of only `string`
+This also means the `date` attribute is not included in props because it is redundant and is mostly for client side JavaScript
 
-### `<LocalTime>`
+### `now`
 
-#### `datetime`
-
-**Default**: `new Date`
-
-If no `datetime` is defined for a `<LocalTime>` component it creates its own
-
-#### `date`
-
-**Type**: `booelan`
-
-A formating preset used to easily show a date without having to type out a format, adds the following attributes:
-
-```tsx
-year="numeric"
-month="short"
-day="numeric"
-```
-
-**Example**:
-
-```tsx
-<LocalTime date/> // Sep 18, 2022
-```
-
-#### `time`
-
-**Type**: `booelan`
-
-A formatting preset used to easily show a time without having to type out a format, adds the following attributes:
-
-```tsx
-hour="2-digit"
-minute="2-digit"
-second="2-digit"
-```
-
-**Example**:
-
-```tsx
-<LocalTime time/> // 07:49:24 PM
-```
-
-### `<TimeUntil> && <TimeAgo>`
-
-#### `micro`
-
-**Type**: `booelan`
-
-Adds the attribute `format="micro"` to your element, shortens the descriptions to 1m, 1h, 1d, 1y
-
-**Example**: 
-
-```tsx
-<TimeUntil datetime="2023-01-01T00:00:00.000Z"> // 'in 3 months'
-<TimeUntil micro datetime="2023-01-01T00:00:00.000Z"> // '104d'
-```
-
-## More Examples
-
-```tsx
-<LocalTime date/> // Sep 18, 2022
-<LocalTime time/> // 09:40:34 PM
-<LocalTime date time/> // Sep 18, 2022 09:40:34 PM
-<RelativeTime datetime="2022-09-17T00:00:00.000Z" /> // 2 days ago
-<TimeUntil datetime="2023-01-01T00:00:00.000Z"/> // in 3 months
-<TimeUntil micro datetime="2023-01-01T00:00:00.000Z"/> // 104d
-<TimeAgo datetime="2020-01-01T00:00:00.000Z"/> // 3 years ago
-<TimeAgo micro datetime="2020-01-01T00:00:00.000Z"/> // 3y
-```
-
-[Check out the @github/time-elements API](https://github.com/github/time-elements#readme) for more help
+A new prop, shorthand for doing `datetime={new Date}`, do not use with the `datetime` prop
