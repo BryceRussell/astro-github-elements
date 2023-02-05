@@ -7,8 +7,7 @@ This is a collection of Astro components that wrap github web components
 - Importing components is easier
 - Typing for props
 - More types are supported for some props
-- Default values for some props
-- + more
+- plus more
 
 ## Packages
 
