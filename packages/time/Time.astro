@@ -20,7 +20,7 @@ type Truncate =
   | { datetime: Date|string; }
   | { now?: boolean; }
 
-export type Props = Common & Truncate
+export type Props = Common & Truncate & astro.JSX.HTMLAttributes
 
 const {
   now,

@@ -1,6 +1,6 @@
 {
   "name": "@astro-github-elements/time",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "author": "Bryce Russell",
   "license": "MIT",
   "description": "An Astro wrapper for the '@github/relative-time-element' package",
@@ -26,7 +26,7 @@
   "exports": "./index.js",
   "files": [
     "index.js",
-    "RelativeTime.astro"
+    "Time.astro"
   ],
   "dependencies": {
     "@github/relative-time-element": "^4.2.0"
